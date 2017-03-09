@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  home_team: one
+  away_team: one
+  home_team_score: 1
+  away_team_score: 1
+  start_time: 
+  end_time: 
+  duration: 
+  attendance: 1
+  slug: MyString
+  interval_type: MyString
+  title: MyString
+
+two:
+  home_team: two
+  away_team: two
+  home_team_score: 1
+  away_team_score: 1
+  start_time: 
+  end_time: 
+  duration: 
+  attendance: 1
+  slug: MyString
+  interval_type: MyString
+  title: MyString

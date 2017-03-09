@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  city: MyString
+  nickname: MyString
+  stattle_id: MyString
+
+two:
+  city: MyString
+  nickname: MyString
+  stattle_id: MyString
