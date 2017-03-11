@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170309033258) do
+ActiveRecord::Schema.define(version: 20170311220439) do
 
   create_table "games", force: :cascade do |t|
     t.integer  "home_team_id"
@@ -30,12 +30,49 @@ ActiveRecord::Schema.define(version: 20170309033258) do
     t.index ["home_team_id"], name: "index_games_on_home_team_id"
   end
 
+  create_table "players", force: :cascade do |t|
+    t.string   "stattle_id"
+    t.boolean  "active"
+    t.string   "birth_date"
+    t.string   "city"
+    t.string   "country"
+    t.integer  "draft_overall_pick"
+    t.integer  "draft_round"
+    t.string   "draft_season"
+    t.string   "draft_team_name"
+    t.string   "first_name"
+    t.string   "handedness"
+    t.string   "height"
+    t.string   "high_school"
+    t.string   "humanized_salary"
+    t.string   "last_name"
+    t.string   "nickname"
+    t.string   "position_abbreviation"
+    t.string   "school"
+    t.string   "slug"
+    t.string   "state"
+    t.string   "uniform_number"
+    t.string   "weight"
+    t.string   "years_of_experience"
+    t.integer  "team_id"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.index ["team_id"], name: "index_players_on_team_id"
+  end
+
   create_table "teams", force: :cascade do |t|
     t.string   "city"
     t.string   "nickname"
     t.string   "stattle_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "color"
+    t.string   "colors"
+    t.string   "hashtag"
+    t.string   "latitude"
+    t.string   "longitude"
+    t.string   "slug"
+    t.string   "division_id"
   end
 
 end
