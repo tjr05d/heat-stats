@@ -1,7 +1,7 @@
-namespace :games do
-  desc "creates records for games since the last available record for the MIA HEAT"
-  task :import_new => :environment do
-    ImportGame.call
+namespace :nba do
+  desc "creates records for games latest games | command line args[:team_slug, :days_ago]"
+  task :latest_games, [:team_slug, :days_ago] => :environment do |t, args|
+    ImportGame.call(args[:team_slug], args[:days_ago].concat(" days ago"))
   end
 
  desc "retrieves the play by play logs for the newest MIA HEAT games"
@@ -15,7 +15,7 @@ namespace :games do
  end
 
  desc "retrieves a teams roster"
- task :import_team => :environment do
+ task :import_teams => :environment do
    ImportTeam.call
  end
 end

@@ -1,2 +1,14 @@
 <h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h3><%= @latest_game.final_score %></h3>
+
+<p>
+  Duration: <%=@latest_game.start_time.strftime('%m/%d/%Y') %>
+</p>
+
+<p>
+  Duration: <%=@latest_game.duration_in_hours %>
+</p>
+
+<p>
+  Attendance: <%= number_with_delimiter(@latest_game.attendance, delimiter: ",")%>
+</p>

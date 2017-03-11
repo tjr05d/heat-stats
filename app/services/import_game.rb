@@ -1,4 +1,3 @@
-require 'pp'
 class ImportGame
   def self.call(team="nba-mia", interval="5 days ago")
     query = {
@@ -31,8 +30,10 @@ class ImportGame
           interval_type: game["interval_type"],
           title: game["title"]
           )
+          puts "*" * 50
+          puts "New Game Record: #{new_game.home_team} vs. #{new_game.away_team} has been created "
+          puts "*" * 50
       end
-
     }
   end
 end
